@@ -1,0 +1,42 @@
+This program is designed to work with the google meet attendance extension 'Google Meet Attendance List'
+
+The link for the above extension - https://chrome.google.com/webstore/detail/google-meet-attendance-li/appcnhiefcidclcdjeahgklghghihfok?
+
+Make sure that the Auto Attendance feature is turned on in the extension if you want to mark attendance based on the time present.
+The auto feature will generate attendance automatically after you end your meet
+Else if you take attendance manually using the save attendance in the people columns of the Google meet ,
+it will mark attendance based on presence alone 
+
+Things to do :
+
+1.Save Format : 'Class_yyyy-mm-dd.csv'  eg.'AC_2021-01-01.csv' 
+  - You should store the daily attendance list in the Data directory
+  - Make sure the the 'data_dir' in line 11 of 'Mark_Attendance.py' points to the Data directory //  '.' refers to the current directory
+2.You should store the class list for different subjects in which you wish to store the attendance in the directory which contains the python file 
+3.Store Format for class list : 'Class.csv' eg.'AC.csv'
+  - The 'Class' name must be same as the names stored in data directory
+  - Eg. If attendance for today's class is stored as 'EC_2021-01-01.csv'
+            then there must be a csv file that contains 
+            the list of students with their Google Account Names stored as 'EC.csv'
+            The attendance for everyday's class will be marked in the 'EC.csv' file headed by the date
+
+4. We can have any number of classes 
+  - 'EC.csv','AC.csv',etc. 
+  - the daily attendence for these classes must be stored as 'EC_2021-01-01','AC_2021-01-01',etc. in the Data directory
+5.Now We are good to go 
+  - Execute the python file 'Mark_Attendance.py' to mark attendances
+
+
+Note :
+
+1.The files in Data folder are just some examples for daily attendance , you can delete them
+2.Similarly the csv files are examples for class list with attendance marked , you can delete them too
+3.The 'parser.ipynb' is also not necessary, you can delete it
+4.We can change the amount of time present in order to be marked present by changing the 'threshold' value in line 82
+  - 0.5*avg  means , present will be marked if anyone is present for atleast half of the class avg time
+
+Precautions:
+
+1.The Class list must contain their google accounts names which they use to join meet
+2.The Class lists must be present 
+3.The names of the daily attendance csv files must match with the class list csv file in terms of class name
