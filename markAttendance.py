@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import pandas as pd 
 import numpy as np
 import os
@@ -79,7 +81,7 @@ def attendance(filename):
 
             times = data['Time in Call'].to_list()
             avg = avg_time(times)
-            threshold = 0.5*avg
+            threshold = 0.3*avg
             data[date]=data['totalTime'].apply(lambda x: 1 if x >threshold else "absent")
 
             # Droping Unnecessary Columns

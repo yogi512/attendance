@@ -1,4 +1,4 @@
-This program is designed to work with the google meet attendance extension 'Google Meet Attendance List'
+# This program is designed to work with the google meet attendance extension 'Google Meet Attendance List'
 
 The link for the above extension - https://chrome.google.com/webstore/detail/google-meet-attendance-li/appcnhiefcidclcdjeahgklghghihfok?
 
@@ -7,7 +7,7 @@ The auto feature will generate attendance automatically after you end your meet
 Else if you take attendance manually using the save attendance in the people columns of the Google meet ,
 it will mark attendance based on presence alone 
 
-Things to do :
+# Things to do :
 
 1.Save Format : 'Class_yyyy-mm-dd.csv'  eg.'AC_2021-01-01.csv' 
   - You should store the daily attendance list in the Data directory
